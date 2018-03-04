@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Microblog</title>
 <head>
 	{% if title %}
 	<title>{{ title }} - Microblog</title>
@@ -10,9 +11,11 @@
 <body>
 	<div>Microblog: 
 		<a href="{{ url_for('index')}}">Home</a>
+		<a href="{{ url_for('order')}}">Order</a>
 		{% if current_user.is_anonymous %}
 		<a href="{{ url_for('login')}}">Login</a>
 		{% else %}
+		<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
 		<a href="{{ url_for('logout')}}">Logout</a>
 		{% endif %}
 	</div>

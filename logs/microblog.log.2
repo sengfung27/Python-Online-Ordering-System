@@ -1,0 +1,128 @@
+2018-03-02 00:45:41,517 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-02 00:45:51,265 ERROR: Exception on /edit_profile [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 84, in edit_profile
+    if form.validate_on_submit():
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 204, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 224, in _run_validation_chain
+    validator(form, self)
+  File "/home/seng/microblog/app/forms.py", line 40, in validate_username
+    user = User.query.filter_by(username=self.userame.data).first()
+AttributeError: 'EditProfileForm' object has no attribute 'userame'
+2018-03-02 00:47:31,397 ERROR: Exception on /edit_profile [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 84, in edit_profile
+    if form.validate_on_submit():
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 204, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 224, in _run_validation_chain
+    validator(form, self)
+  File "/home/seng/microblog/app/forms.py", line 40, in validate_username
+    user = User.query.filter_by(username=self.userame.data).first()
+AttributeError: 'EditProfileForm' object has no attribute 'userame'
+2018-03-02 14:36:40,199 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-03 22:45:21,169 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-03 22:46:23,844 ERROR: Exception on /edit_profile [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 88, in edit_profile
+    if form.validate_on_submit():
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 204, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 224, in _run_validation_chain
+    validator(form, self)
+  File "/home/seng/microblog/app/forms.py", line 40, in validate_username
+    user = User.query.filter_by(username=self.userame.data).first()
+AttributeError: 'EditProfileForm' object has no attribute 'userame'
+2018-03-03 22:46:35,767 ERROR: Exception on /edit_profile [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 88, in edit_profile
+    if form.validate_on_submit():
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 204, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 224, in _run_validation_chain
+    validator(form, self)
+  File "/home/seng/microblog/app/forms.py", line 40, in validate_username
+    user = User.query.filter_by(username=self.userame.data).first()
+AttributeError: 'EditProfileForm' object has no attribute 'userame'
+2018-03-03 22:49:51,979 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
