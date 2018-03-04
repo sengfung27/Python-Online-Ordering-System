@@ -12,13 +12,13 @@ cd microblog
 source venv/bin/activate
 ```
 
-### Run Flask without debug mode
+### Running Flask without debug mode
 ```
 export FLASK_DEBUG=0
 flask run
 ```
 
-### Run Flask with debug mode
+### Running Flask with debug mode
 ```
 export FLASK_DEBUG=1
 flask run
