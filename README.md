@@ -1,10 +1,10 @@
 # Python-Online-Ordering-System
 git clone this repository
 
-##After that, do 
-"""
+## After that, do 
+'''
 cd microblog
-"""
+'''
 
 Then 
 """
