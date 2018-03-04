@@ -1,12 +1,13 @@
 # Python-Online-Ordering-System
-git clone this repository
 
-### After that, do 
+## Getting Started 
+
+### Git clone this repository and do 
 ```
 cd microblog
 ```
 
-### Then 
+### Activate virtual environment
 ```
 source venv/bin/activate
 ```
