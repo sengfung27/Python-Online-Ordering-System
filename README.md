@@ -1,24 +1,24 @@
 # Python-Online-Ordering-System
 git clone this repository
 
-## After that, do 
-'''
+### After that, do 
+```
 cd microblog
-'''
+```
 
-Then 
-"""
+### Then 
+```
 source venv/bin/activate
-"""
+```
 
-##Run Flask without debug mode
-"""
+### Run Flask without debug mode
+```
 export FLASK_DEBUG=0
 flask run
-"""
+```
 
-##Run Flask with debug mode
-"""
+### Run Flask with debug mode
+```
 export FLASK_DEBUG=1
 flask run
-"""
+```
