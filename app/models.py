@@ -8,18 +8,36 @@ from hashlib import md5
 def load_user(id):
 	return User.query.get(int(id))
 	
+
+
 class User(UserMixin, db.Model):
 	id = db.Column(db.Integer, primary_key=True)
 	username = db.Column(db.String(64), index=True, unique=True)
 	email = db.Column(db.String(120), index=True, unique=True)
+	urole = db.Column(db.String(30), index=True)
 	password_hash = db.Column(db.String(128))
 	posts = db.relationship('Post',backref='author',lazy='dynamic')
 	about_me = db.Column(db.String(140))
 	last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 	
 	def __repr__(self):
-		return '<User {}>'.format(self.username)
+		return '<User {} {}>'.format(self.username, self.urole)
 	
+	def get_id(self):
+		return self.id
+
+	def get_username(self):
+		return self.username
+		
+	def get_email(self):
+		return self.email
+		
+	def get_urole(self):
+		return self.urole
+		
+	def is_manager(self):
+		return self.urole == 'manager'
+
 	def set_password(self, password):
 		self.password_hash = generate_password_hash(password)
 	
@@ -38,4 +56,3 @@ class Post(db.Model):
 
 	def __repr__(self):
 		return '<Post {}>'.format(self.body)
-		

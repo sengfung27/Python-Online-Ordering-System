@@ -1,4 +1,4 @@
-2018-03-03 22:50:15,596 ERROR: Exception on /edit_profile [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+2018-03-09 01:58:54,784 ERROR: Exception on /payroll [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,26 +12,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 88, in edit_profile
-    if form.validate_on_submit():
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
-    return self.is_submitted() and self.validate()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 310, in validate
-    return super(Form, self).validate(extra)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/form.py", line 152, in validate
-    if not field.validate(self, extra):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 204, in validate
-    stop_validation = self._run_validation_chain(form, chain)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/wtforms/fields/core.py", line 224, in _run_validation_chain
-    validator(form, self)
-  File "/home/seng/microblog/app/forms.py", line 40, in validate_username
-    user = User.query.filter_by(username=self.userame.data).first()
-AttributeError: 'EditProfileForm' object has no attribute 'userame'
-2018-03-03 22:50:49,706 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-03 22:52:04,322 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-03 22:52:09,648 ERROR: Exception on /edit_profile [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined
+2018-03-09 01:58:55,377 ERROR: Exception on /complaints [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -45,12 +29,11 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 95, in edit_profile
-    form.username.data = current_user.username
-AttributeError: 'EditProfileForm' object has no attribute 'username'
-2018-03-03 22:52:16,648 ERROR: Exception on /edit_profile [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined
+2018-03-09 02:09:14,399 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-09 02:09:21,260 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -64,12 +47,26 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 95, in edit_profile
-    form.username.data = current_user.username
-AttributeError: 'EditProfileForm' object has no attribute 'username'
-2018-03-03 22:56:57,876 ERROR: Exception on /edit_profile [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+  File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
+    return fn(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 30, in index
+    return render_template('index.html',title ='Home')
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/seng/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/seng/microblog/app/templates/base.html", line 24, in top-level template code
+    {% elif current_user.is_authenticated.is_manager() == 'manager' %}
+jinja2.exceptions.UndefinedError: 'bool object' has no attribute 'is_manager'
+2018-03-09 02:09:38,218 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -83,13 +80,29 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 95, in edit_profile
-    return redirect(url_for('edit_profile'))
-AttributeError: 'EditProfileForm' object has no attribute 'username'
-2018-03-03 22:57:05,236 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-03 22:57:08,716 ERROR: Exception on /edit_profile [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+  File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
+    return fn(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 30, in index
+    return render_template('index.html',title ='Home')
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/seng/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/seng/microblog/app/templates/base.html", line 24, in top-level template code
+    {% elif current_user.is_authenticated.is_manager() == 'manager' %}
+jinja2.exceptions.UndefinedError: 'bool object' has no attribute 'is_manager'
+2018-03-09 02:10:15,758 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-09 02:11:45,080 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-09 02:17:50,912 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+2018-03-09 02:17:52,561 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -103,9 +116,25 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 98, in edit_profile
-    form.username.data = current_user.username
-AttributeError: 'EditProfileForm' object has no attribute 'username'
-2018-03-03 23:01:04,120 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+  File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
+    return fn(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 30, in index
+    return render_template('index.html',title ='Home')
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/seng/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/seng/microblog/app/templates/base.html", line 22, in top-level template code
+    {% if user.is_manager %}
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2018-03-09 02:18:13,305 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]

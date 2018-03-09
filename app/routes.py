@@ -2,27 +2,44 @@ from app import app, db
 from flask import render_template, flash, redirect, request, url_for
 from app.forms import EditProfileForm, LoginForm, RegistrationForm
 from app.models import User
-from flask_login import login_required, current_user, login_user, logout_user
+from flask_login import current_user, login_user, logout_user
 from werkzeug.urls import url_parse
 from datetime import datetime
+from functools import wraps
+from flask_login import LoginManager
+
+def login_required(role = "ANY"):
+	def wrapper(fn):
+		@wraps(fn)
+		def decorated_view(*args, **kwargs):
+
+			if not current_user.is_authenticated:
+				return redirect(url_for('login',next=request.url))	
+			urole = current_user.get_urole()
+			if ( (urole != role) and (role != "ANY")):
+				return current_app.login_manager.unauthorized()
+			return fn(*args, **kwargs)
+		return decorated_view
+	return wrapper
 
 @app.route('/')
 @app.route('/index')
-@login_required
+@login_required(role="ANY")
 def index():
 	
-	posts = [
-		{
-			'author': {'username': 'John'},
-			'body': 'Beautiful day in Portland!'
-		},
-		{
-			'author': {'username': 'Susan'},
-			'body': 'The Avengers movie was so cool!'
-		}
+	return render_template('index.html',title ='Home')
 
-	]
-	return render_template('index.html',title ='Home', posts = posts)
+@app.route('/payroll')
+@login_required(role="manager")
+def payroll():
+	
+	return render_template('payroll.html')
+
+@app.route('/complaints')
+@login_required(role="manager")
+def complaints():
+	
+	return render_template('complaints.html')
 
 @app.route('/login', methods = ['GET','POST'])
 def login():
@@ -62,19 +79,16 @@ def register():
 		
 		
 @app.route('/user/<username>')
-@login_required
+@login_required(role="ANY")
 def user(username):
 	user = User.query.filter_by(username=username).first_or_404()
-	posts = [
-		{'author': user, 'body': 'Test post #1'},
-		{'author': user, 'body': 'Test post #2'}
-	]
-	return render_template('user.html', user=user,posts=posts)
 
-@app.route('/order')
-def order():
+	return render_template('user.html', user=user)
+
+@app.route('/menu')
+def menu():
 	
-	return render_template('order.html',title ='Order')
+	return render_template('menu.html',title ='Menu')
 
 @app.before_request
 def before_request():
@@ -83,7 +97,7 @@ def before_request():
 		db.session.commit()
 
 @app.route('/edit_profile', methods=['GET','POST'])
-@login_required
+@login_required(role="ANY")
 def edit_profile():
 	form = EditProfileForm(current_user.username)
 	if form.validate_on_submit():

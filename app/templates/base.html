@@ -2,6 +2,13 @@
 <html>
 <title>Microblog</title>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	{% if title %}
 	<title>{{ title }} - Microblog</title>
 	{% else %}
@@ -11,7 +18,11 @@
 <body>
 	<div>Microblog: 
 		<a href="{{ url_for('index')}}">Home</a>
-		<a href="{{ url_for('order')}}">Order</a>
+		<a href="{{ url_for('menu')}}">Menu</a>
+		{% if current_user.is_manager %}
+		<a href="{{ url_for('payroll')}}">Payroll</a>
+		<a href="{{ url_for('complaints')}}">Complaints</a>
+		{% endif %}
 		{% if current_user.is_anonymous %}
 		<a href="{{ url_for('login')}}">Login</a>
 		{% else %}
