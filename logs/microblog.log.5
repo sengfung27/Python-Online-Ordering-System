@@ -1,73 +1,4 @@
-2018-03-09 01:19:07,741 ERROR: Exception on /complaints [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-09 01:19:09,940 ERROR: Exception on /payroll [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-09 01:20:19,593 ERROR: Exception on /complaints [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-09 01:20:20,822 ERROR: Exception on /payroll [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-09 01:20:57,343 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 01:20:58,702 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+2018-03-14 15:44:24,269 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -83,26 +14,41 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
     return fn(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 30, in index
-    return render_template('index.html',title ='Home')
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
+  File "/home/seng/microblog/app/routes.py", line 41, in special
+    return render_template('special.html')
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/seng/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/seng/microblog/app/templates/base.html", line 22, in top-level template code
-    {% if request.user.get_urole %}
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'flask.wrappers.Request object' has no attribute 'user'
-2018-03-09 01:20:59,743 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+  File "/home/seng/microblog/app/templates/special.html", line 10, in template
+    {% block content %}
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2018-03-14 15:45:43,178 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:46:32,634 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:47:22,049 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:50:56,619 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -116,25 +62,77 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
-    return fn(*args, **kwargs)
-  File "/home/seng/microblog/app/routes.py", line 30, in index
-    return render_template('index.html',title ='Home')
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined
+2018-03-14 15:53:33,466 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:53:52,194 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/home/seng/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/seng/microblog/app/templates/base.html", line 22, in top-level template code
-    {% if request.user.get_urole %}
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'flask.wrappers.Request object' has no attribute 'user'
-2018-03-09 01:23:48,036 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined
+2018-03-14 16:01:58,656 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined
+2018-03-14 21:05:55,870 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 21:06:21,815 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined
+2018-03-14 21:06:55,990 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 21:07:24,836 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: name 'current_app' is not defined

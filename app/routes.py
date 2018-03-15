@@ -8,7 +8,7 @@ from datetime import datetime
 from functools import wraps
 from flask_login import LoginManager
 
-def login_required(role = "ANY"):
+def login_required(role):
 	def wrapper(fn):
 		@wraps(fn)
 		def decorated_view(*args, **kwargs):
@@ -16,7 +16,7 @@ def login_required(role = "ANY"):
 			if not current_user.is_authenticated:
 				return redirect(url_for('login',next=request.url))	
 			urole = current_user.get_urole()
-			if ( (urole != role) and (role != "ANY")):
+			if  (urole < role) :
 				return current_app.login_manager.unauthorized()
 			return fn(*args, **kwargs)
 		return decorated_view
@@ -24,22 +24,58 @@ def login_required(role = "ANY"):
 
 @app.route('/')
 @app.route('/index')
-@login_required(role="ANY")
 def index():
 	
 	return render_template('index.html',title ='Home')
 
-@app.route('/payroll')
-@login_required(role="manager")
-def payroll():
-	
-	return render_template('payroll.html')
+@app.route('/special')
+@login_required(2)
+def special():
 
-@app.route('/complaints')
-@login_required(role="manager")
+	return render_template('special.html')
+
+@app.route('/special/deliveries')
+@login_required(2)
+def delivery():
+
+	return render_template('deliveries/delivery.html')
+
+@app.route('/special/deliveries/map')
+@login_required(2)
+def map():
+	
+	return render_template('deliveries/map.html')
+
+@app.route('/special/cook')
+@login_required(3)
+def cook():
+
+	return render_template('cooks/cook.html')
+
+@app.route('/special/cook/prices')
+@login_required(3)
+def prices():
+	
+	return render_template('cooks/prices.html')
+
+@app.route('/special/manager')
+@login_required(4)
+def manager():
+
+	return render_template('managers/manager.html')
+
+
+@app.route('/special/manager/complaints')
+@login_required(role=4)
 def complaints():
 	
-	return render_template('complaints.html')
+	return render_template('managers/complaints.html')
+
+@app.route('/special/manager/payroll')
+@login_required(role=4)
+def payroll():
+	
+	return render_template('managers/payroll.html')
 
 @app.route('/login', methods = ['GET','POST'])
 def login():
@@ -69,7 +105,7 @@ def register():
 		return redirect(url_for('index'))
 	form = RegistrationForm()
 	if form.validate_on_submit():
-		user = User(username=form.username.data, email=form.email.data)
+		user = User(username=form.username.data, email=form.email.data, urole = 1)
 		user.set_password(form.password.data)
 		db.session.add(user)
 		db.session.commit()
@@ -79,7 +115,7 @@ def register():
 		
 		
 @app.route('/user/<username>')
-@login_required(role="ANY")
+@login_required(role=1)
 def user(username):
 	user = User.query.filter_by(username=username).first_or_404()
 
@@ -97,7 +133,7 @@ def before_request():
 		db.session.commit()
 
 @app.route('/edit_profile', methods=['GET','POST'])
-@login_required(role="ANY")
+@login_required(role=1)
 def edit_profile():
 	form = EditProfileForm(current_user.username)
 	if form.validate_on_submit():
@@ -112,4 +148,3 @@ def edit_profile():
 		form.about_me.data = current_user.about_me
 
 	return render_template('edit_profile.html', title='Edit Profile', form=form)
-	

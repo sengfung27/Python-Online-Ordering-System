@@ -1,4 +1,29 @@
-2018-03-08 23:27:29,905 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+2018-03-14 15:36:19,959 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1725, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2018-03-14 15:36:23,119 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1725, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+2018-03-14 15:38:20,870 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:38:57,759 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:39:34,863 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:39:36,192 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,120 +37,84 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 17, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-08 23:28:37,148 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:28:45,960 ERROR: Exception on /index [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 17, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-08 23:31:59,053 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:35:36,485 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:43:51,317 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:48:09,157 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:48:39,573 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:49:07,742 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-08 23:49:13,942 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 00:03:47,649 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 00:03:58,530 ERROR: Exception on /login [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 39, in login
-    if user is None or not user.check_password(form.password.data):
-  File "/home/seng/microblog/app/models.py", line 37, in check_password
-    return check_password_hash(self.password_hash,password)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/werkzeug/security.py", line 245, in check_password_hash
-    if pwhash.count('$') < 2:
-AttributeError: 'NoneType' object has no attribute 'count'
-2018-03-09 00:04:11,460 ERROR: Exception on /login [POST] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 39, in login
-    if user is None or not user.check_password(form.password.data):
-  File "/home/seng/microblog/app/models.py", line 37, in check_password
-    return check_password_hash(self.password_hash,password)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/werkzeug/security.py", line 245, in check_password_hash
-    if pwhash.count('$') < 2:
-AttributeError: 'NoneType' object has no attribute 'count'
-2018-03-09 00:05:58,109 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 00:09:37,416 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 00:12:05,444 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 00:22:43,705 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
-2018-03-09 00:22:46,416 ERROR: Exception on /register [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 71, in register
-    return render_template('register.html', title='Register', form=form)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 134, in render_template
-    context, ctx.app)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 116, in _render
-    rv = template.render(context)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
+  File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
+    return fn(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 41, in special
+    return render_template('special.html')
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "/home/seng/microblog/app/templates/register.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/seng/microblog/app/templates/base.html", line 23, in top-level template code
-    <a href="{{ url_for('payroll')}}">Payroll</a>
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 333, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1805, in handle_url_build_error
+  File "/home/seng/microblog/app/templates/special.html", line 10, in template
+    {% block content %}
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2018-03-14 15:40:25,244 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-14 15:40:26,789 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
   File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
     raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/helpers.py", line 323, in url_for
-    force_external=external)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'payroll'. Did you mean 'edit_profile' instead?
-2018-03-09 00:23:09,248 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:44]
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/seng/microblog/app/routes.py", line 21, in decorated_view
+    return fn(*args, **kwargs)
+  File "/home/seng/microblog/app/routes.py", line 41, in special
+    return render_template('special.html')
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/seng/microblog/app/templates/special.html", line 10, in template
+    {% block content %}
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 82, in generate
+    generator.visit(node)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "/home/seng/microblog/venv/lib/python3.5/site-packages/jinja2/compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
