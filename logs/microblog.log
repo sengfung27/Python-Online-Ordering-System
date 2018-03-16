@@ -37,5 +37,13 @@ NameError: name 'current_app' is not defined
 2018-03-16 17:26:26,943 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
 2018-03-16 17:45:52,354 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
 2018-03-16 18:14:26,741 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
+<<<<<<< HEAD
 2018-03-16 18:30:59,118 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
 2018-03-16 18:33:34,892 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
+=======
+2018-03-16 18:23:48,687 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-16 18:31:42,927 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-16 18:33:45,864 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-16 18:36:54,805 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+2018-03-16 18:38:17,140 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
+>>>>>>> 202fc18be46ebbaa30ec9d5c7ac360b10f97a858
