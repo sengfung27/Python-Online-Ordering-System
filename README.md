@@ -4,7 +4,8 @@
 
 ### Git clone this repository and do 
 ```
-cd microblog
+cd microblog/venv
+pip3 install
 ```
 
 ### Activate virtual environment
@@ -24,4 +25,11 @@ flask run
 ```
 export FLASK_DEBUG=1
 flask run
+```
+
+### Git Command
+#### Reset local repository branch like the remote repository HEAD:
+```
+git fetch origin
+git reset --hard origin/branch_name
 ```
