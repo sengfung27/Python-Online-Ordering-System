@@ -53,17 +53,11 @@ Setup:
 
 4. then fetch the develop branch and your own branch:
 
-	`git fetch origin develop:develop`
-
 	`git fetch origin your_branch:your_branch`
 
 5. use `git branch` to see all local branch, you should see your branch, develop branch and the master branch.
 
 6. go to the develop branch by doing `git checkout develop`, set upstream branch:
-
-	`git branch --set-upstream-to origin/develop`
-
-	and got to your branch do the same thing again:
 
 	`git branch --set-upstream-to origin/your_branch`
 
@@ -77,7 +71,7 @@ How to work?
 
 - When you finish a model (design and implementation, including testing), you have to merge your code to the develop branch, by doing the following things:
 
-	1. `git checkout develop`
+	1. `git checkout master`
 
 	2. `git pull`
 
@@ -87,7 +81,7 @@ How to work?
 	
 - You can update your branch to match develop branch anytime
 
-	1. `git checkout develop`
+	1. `git checkout master`
 	
 	2. `git pull`
 	
