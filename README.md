@@ -41,9 +41,9 @@ Setup:
 
 1. In the terminal/Shell, go to the directory where you want to place the team project, then use the following command to clone our project:
 
-	`git clone https://github.com/whuang001/cts.git`
+	`git clone https://github.com/sengfung27/Python-Online-Ordering-System.git
 
-2. change directory to `cts` or `coding-turk-system`then use the following command to see local branch:
+2. change directory to `microblog` then use the following command to see local branch:
 
 	`git branch`
 
@@ -51,13 +51,13 @@ Setup:
 
 	`git branch -r`
 
-4. then fetch the develop branch and your own branch:
+4. then fetch your own branch:
 
 	`git fetch origin your_branch:your_branch`
 
-5. use `git branch` to see all local branch, you should see your branch, develop branch and the master branch.
+5. use `git branch` to see all local branch, you should see your branch and the master branch.
 
-6. go to the develop branch by doing `git checkout develop`, set upstream branch:
+6. go to your branch by doing `git checkout your_branch`, set upstream branch:
 
 	`git branch --set-upstream-to origin/your_branch`
 
@@ -79,12 +79,4 @@ How to work?
 
 	4. `git push`. If conflict happen, solve conflict and commit, then do `git push`
 	
-- You can update your branch to match develop branch anytime
 
-	1. `git checkout master`
-	
-	2. `git pull`
-	
-	3. `git checkout your_branch`
-	
-	4. `git merge develop`
