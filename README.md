@@ -41,7 +41,7 @@ Setup:
 
 1. In the terminal/Shell, go to the directory where you want to place the team project, then use the following command to clone our project:
 
-	`git clone https://github.com/sengfung27/Python-Online-Ordering-System.git
+	`git clone https://github.com/sengfung27/Python-Online-Ordering-System.git`
 
 2. change directory to `microblog` then use the following command to see local branch:
 
@@ -65,9 +65,9 @@ Setup:
 
 How to work?
 
-- Your branch belongs to your self, here is where you work. **However, do not work on either develop branch or master branch.**
-
-	1. Use `git checkout your_branch` to switch to your branch. Use `git branch` to see where you are.
+- Your branch belongs to your self, here is where you work. **However, do not work on master branch.**
+	 To switch to your branch. Use `git checkout your_branch`
+	 Use `git branch` to see where you are.
 
 - When you finish a model (design and implementation, including testing), you have to merge your code to the develop branch, by doing the following things:
 
