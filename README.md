@@ -6,6 +6,11 @@
 ```
 cd microblog/venv
 pip3 install
+pip install --upgrade pip
+sudo pip install flask_sqlalchemy
+sudo pip install flask_migrate
+sudo pip install flask_login
+sudo pip install flask_wtf
 ```
 
 ### Activate virtual environment
