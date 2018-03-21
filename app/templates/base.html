@@ -4,6 +4,8 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/base.css')}}">
+
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -16,21 +18,47 @@
 	{% endif %}
 </head>
 <body>
-	<div>Microblog: 
-		<a href="{{ url_for('index')}}">Home</a>
-		<a href="{{ url_for('menu')}}">Menu</a>
+	<div class="header">
+		
+		<div class="user_login">
 		{% if current_user.is_manager and current_user.is_authenticated %}
-		<a href="{{ url_for('special')}}">Special</a>
+		<a href="{{ url_for('special')}}">Special</a`>
 		{% endif %}
 		{% if current_user.is_anonymous %}
-		<a href="{{ url_for('login')}}">Login</a>
+		<a href="{{ url_for('login')}}">Login/register</a>
 		{% else %}
 		<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
 		<a href="{{ url_for('logout')}}">Logout</a>
 		{% endif %}
+		</div>
+		
 	</div>
 
+	<!--<div>Microblog: -->
+	<div class="nav">
+		<a href="{{ url_for('menu')}}">Menu</a>
+		<a href="{{ url_for('index')}}">Home</a>
+	</div>
+
+<!--
+	<div class="user_login">
+		{% if current_user.is_manager and current_user.is_authenticated %}
+		<li><a href="{{ url_for('special')}}">Special</a`></li>
+		{% endif %}
+		{% if current_user.is_anonymous %}
+		<li><a href="{{ url_for('login')}}">Login</a></li>
+		{% else %}
+		<li><a href="{{ url_for('user',username=current_user.username) }}">Profile</a></li>
+		<li><a href="{{ url_for('logout')}}">Logout</a></li>
+		{% endif %}
+	</div>
+-->
 	<hr>
+<div id="wrapper">
+	<div class="page-wrapper" style="padding-top: 0px";>
+		<div class="container">
+			<div class="left-space" style="padding-left: 45px";>
+				<div class="inner-space" style="margin-top: 7px; min-height: 1000px";>
 	{% with messages = get_flashed_messages() %}
 	{% if messages %}
 	<ul>
@@ -44,6 +72,12 @@
 	{% endwith %}
 	{% block content %}
 	{% endblock %}
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

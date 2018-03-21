@@ -2,6 +2,8 @@
 
 {% block content %}
 	<h1>Sign In</h1>
+	<br>
+	<div class="row" style="width: 250px; margin:0 auto";>
 		<form action="" method="post">
 			{{ form.hidden_tag() }}
 			<p>
@@ -30,5 +32,5 @@
 			</p>
 		</form>
 	<p>New User? <a href="{{ url_for('register')}}">Click to Register!</a></p>
-
+</div>
 {% endblock %} 
