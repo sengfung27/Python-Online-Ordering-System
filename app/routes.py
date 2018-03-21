@@ -24,26 +24,26 @@ def login_required(role):
 @app.route('/')
 @app.route('/index')
 def index():
-	
+
 	return render_template('index.html',title ='Home')
 	
 @app.route('/manager')
 @login_required(4)
 def manager():
 
-	return render_template('managers/manager.html')
+	return render_template('managers/manager.html',title = 'Manager')
 
 @app.route('/cook')
 @login_required(3)
 def cook():
 
-	return render_template('cooks/cook.html')
+	return render_template('cooks/cook.html',title = 'Cook')
 
 @app.route('/delivery')
 @login_required(2)
 def delivery():
 
-	return render_template('deliveries/delivery.html')
+	return render_template('deliveries/delivery.html',title = 'Delivery')
 
 @app.route('/map')
 @login_required(2)
@@ -57,6 +57,12 @@ def map():
 def prices():
 	
 	return render_template('cooks/prices.html')
+
+@app.route('/cookcustorder')
+@login_required(3)
+def cookcustorder():
+
+	return render_template('cooks/cookcustorder.html')
 
 @app.route('/complaints')
 @login_required(4)
