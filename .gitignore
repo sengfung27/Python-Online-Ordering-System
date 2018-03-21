@@ -1,3 +1,6 @@
+# MAC
 .DS_Store
+
+# FLASK logs
 logs
 log
