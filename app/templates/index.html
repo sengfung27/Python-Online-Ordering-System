@@ -4,7 +4,7 @@
 	
 	{% if current_user.is_authenticated %}
 		<h1>Hello, {{ current_user.username }}!</h1>
-		<h2>This is manager's index mun</h2>
+		<h2>This is registered customer {{current_user.username}}</h2>
 	{% else %}
 		<h1>Hello, Stranger !</h1>
 	{% endif %}
