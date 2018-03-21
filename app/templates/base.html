@@ -18,10 +18,18 @@
 <body>
 	<div>Microblog: 
 		<a href="{{ url_for('index')}}">Home</a>
-		<a href="{{ url_for('menu')}}">Menu</a>
-		{% if current_user.is_manager and current_user.is_authenticated %}
-		<a href="{{ url_for('special')}}">Special</a>
+		{% if current_user.urole == 4 and current_user.is_authenticated %}
+			<a href="{{ url_for('complaints')}}">Complaints</a>
+			<a href="{{ url_for('payroll')}}">Payrolls</a>
 		{% endif %}
+		{% if current_user.urole == 3 and current_user.is_authenticated %}
+			<a href="{{ url_for('prices')}}">Prices</a>
+		{% endif %}
+		{% if current_user.urole == 2 and current_user.is_authenticated %}
+			<a href="{{ url_for('map')}}">Map</a>		
+		{% endif %}
+
+		<a href="{{ url_for('menu')}}">Menu</a>
 		{% if current_user.is_anonymous %}
 		<a href="{{ url_for('login')}}">Login</a>
 		{% else %}

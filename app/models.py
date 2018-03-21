@@ -33,15 +33,6 @@ class User(UserMixin, db.Model):
 		
 	def get_urole(self):
 		return self.urole
-		
-	def is_manager(self):
-		return self.urole > 1
-
-	def is_cooks(self):
-		return self.urole == 3
-
-	def deliveries(self):
-		return self.urole == 2
 
 	def set_password(self, password):
 		self.password_hash = generate_password_hash(password)

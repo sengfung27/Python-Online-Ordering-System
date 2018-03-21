@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-            
-	<h1>Deliveries Page</h1>
-	<h2>This only can see by Deliveries Cooks and manager</h2>
-	<a href="{{ url_for('map')}}">Map</a>
-	<a href="{{ url_for('index')}}">Home</a>
+{% extends "base.html" %}   
 
-</html>
+{% block content %}  
+    <h2>Delivery Page</h2>
+    <p>This page can only be accessed by manager seng.</p><br/>
+
+{% endblock %}

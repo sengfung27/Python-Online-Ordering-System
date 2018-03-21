@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-            
-	<h1>Price Page</h1>
-	<h2>This only can see by Cooks and manager</h2>
-	<a href="{{ url_for('index')}}">Home</a>
+{% extends "base.html" %}   
 
-</html>
+{% block content %}  
+    <h1>Prices Page</h1>
+	<h2>This only can see by Cooks </h2>
+
+
+{% endblock %}
