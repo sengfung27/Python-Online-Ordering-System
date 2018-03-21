@@ -1,0 +1,13 @@
+.cake {
+    margin: 20px 0px 20px 30px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+    display: inline;
+}
+
+.desc {
+	padding: 10px;
+	text-align: center;
+	font-size: 15;
+}
