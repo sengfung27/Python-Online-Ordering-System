@@ -2,12 +2,12 @@
 .DS_Store
 
 #Flask logs and db
-*.log
+.log
 log
 logs
-*.db
+.db
 
 #Python stuff
-*.pyc
-*.idea
+.pyc
+.idea
 
