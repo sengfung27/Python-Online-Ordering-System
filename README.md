@@ -38,7 +38,13 @@ flask run
 git fetch origin
 git reset --hard origin/branch_name
 ```
+#### Delete branch on local and remote
+```
+git checkout master 
+git branch -d name_branch_local
+git push origin --delete name_branch_remote
 
+```
 
 ## Workflow
 
