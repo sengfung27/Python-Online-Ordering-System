@@ -1,16 +1,15 @@
 # Python-Online-Ordering-System
 
 ## Getting Started 
-
-### Git clone this repository and do 
+### Make sure you have at least Python 2.7 in you local machine
 ```
-cd microblog/venv
-pip3 install
-pip install --upgrade pip
-sudo pip install flask_sqlalchemy
-sudo pip install flask_migrate
-sudo pip install flask_login
-sudo pip install flask_wtf
+pip install virtualenv
+virtualenv venv
+pip install flask
+pip install flask_sqlalchemy
+pip install flask_migrate
+pip install flask_login
+pip install flask_wtf
 ```
 
 ### Activate virtual environment
@@ -21,7 +20,6 @@ export FLASK_APP=microblog.py
 
 ### Running Flask without debug mode
 ```
-
 export FLASK_DEBUG=0
 flask run
 ```
@@ -37,6 +35,11 @@ flask run
 ```
 git fetch origin
 git reset --hard origin/branch_name
+```
+#### Create branch on local and remote
+```
+git checkout -b name_branch
+git push origin name_branch
 ```
 #### Delete branch on local and remote
 ```
