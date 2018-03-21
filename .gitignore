@@ -1,4 +1,13 @@
+#Mac
 .DS_Store
-*.log
 
+#Flask logs and db
+*.log
+log
+logs
+*.db
+
+#Python stuff
+*.pyc
+*.idea
 
