@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Microblog</title>
+<title>Cake</title>
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -18,29 +18,33 @@
 <body>
 	<div>Microblog: 
 		<a href="{{ url_for('index')}}">Home</a>
+
 		{% if current_user.urole == 4 and current_user.is_authenticated %}
 			<a href="{{ url_for('complaints')}}">Complaints</a>
 			<a href="{{ url_for('payroll')}}">Payrolls</a>
 		{% endif %}
+
 		{% if current_user.urole == 3 and current_user.is_authenticated %}
 			<a href="{{ url_for('prices')}}">Prices</a>
 		{% endif %}
+
 		{% if current_user.urole == 2 and current_user.is_authenticated %}
 			<a href="{{ url_for('map')}}">Map</a>		
 		{% endif %}
 
-		<a href="{{ url_for('menu')}}">Menu</a>
+			<a href="{{ url_for('menu')}}">Menu</a>
 		{% if current_user.is_anonymous %}
-		<a href="{{ url_for('login')}}">Login</a>
+			<a href="{{ url_for('login')}}">Login</a>
 		{% else %}
-		<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
-		<a href="{{ url_for('logout')}}">Logout</a>
+			<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
+			<a href="{{ url_for('logout')}}">Logout</a>
 		{% endif %}
+
 	</div>
 
 	<hr>
-	{% with messages = get_flashed_messages() %}
-	{% if messages %}
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
 	<ul>
 		{% for message in messages %}
 		<li>
@@ -50,6 +54,7 @@
 	</ul>
 	{% endif %}
 	{% endwith %}
+
 	{% block content %}
 	{% endblock %}
 
