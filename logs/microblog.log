@@ -32,3 +32,24 @@ Traceback (most recent call last):
   File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
     return current_app.login_manager.unauthorized()
 NameError: name 'current_app' is not defined
+2018-03-09 13:56:19,466 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
+2018-03-09 14:34:52,344 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
+2018-03-09 14:36:13,445 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
+2018-03-09 14:36:31,054 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
+2018-03-09 14:40:17,981 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
+2018-03-09 14:41:06,817 ERROR: Exception on /payroll [GET] [in /home/gor/.local/lib/python2.7/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/home/gor/.local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/gor/.local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/gor/.local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/gor/.local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/gor/.local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/gor/Python-Online-Ordering-System/app/routes.py", line 20, in decorated_view
+    return current_app.login_manager.unauthorized()
+NameError: global name 'current_app' is not defined
+2018-03-09 14:45:01,764 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
