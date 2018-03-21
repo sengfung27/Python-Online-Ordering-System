@@ -22,7 +22,7 @@
 		<div class = "options" align = "right">
 		{% if current_user.urole == 4 and current_user.is_authenticated %}
 			<a href="{{ url_for('complaints')}}">Complaints</a>
-			<a href="{{ url_for('pay')}}">Payrolls</a>
+			<a href="{{ url_for('payroll')}}">Payrolls</a>
 		
 		{% elif current_user.urole == 3 and current_user.is_authenticated %}
 			<a href="{{ url_for('prices')}}">Prices</a>		

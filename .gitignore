@@ -10,4 +10,4 @@ logs
 #Python stuff
 .pyc
 .idea
-
+__pycache__
