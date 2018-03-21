@@ -12,7 +12,6 @@ def login_required(role):
 	def wrapper(fn):
 		@wraps(fn)
 		def decorated_view(*args, **kwargs):
-
 			if not current_user.is_authenticated:
 				return redirect(url_for('login',next=request.url))	
 			urole = current_user.get_urole()
