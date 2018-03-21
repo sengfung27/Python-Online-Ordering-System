@@ -10,5 +10,6 @@ app.db
 
 #Python stuff
 .pyc
+*.pyc
 .idea
 __pycache__
