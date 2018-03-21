@@ -1,10 +1,4 @@
-# MAC
 .DS_Store
-<<<<<<< HEAD
 *.log
-=======
 
-# FLASK logs
-logs
-log
->>>>>>> 07707400906a07fad9168d96b45410d8d03e2c04
+
