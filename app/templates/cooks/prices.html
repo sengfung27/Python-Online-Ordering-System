@@ -1,8 +1,61 @@
-<!DOCTYPE html>
-<html>
-            
-	<h1>Price Page</h1>
-	<h2>This only can see by Cooks and manager</h2>
-	<a href="{{ url_for('index')}}">Home</a>
+{% extends "base.html" %}   
 
-</html>
+{% block content %}  
+	<head>
+	    <!-- for table-->
+	    <style>
+	        table {
+	            font-family: arial, sans-serif;
+	            border-collapse: collapse;
+	            width: 100%;
+	        }
+
+	        td {
+	            border: 1px solid #dddddd;
+	            text-align: left;
+	            padding: 8px;
+	        }
+
+	        tr:nth-child(even) {
+	            background-color: #dddddd;
+	        }
+	    </style>
+	</head>
+
+	<body>
+
+	<div class = "welcome" align = "left"> <!--welcome message-->
+	    <h2> Welcome Cook!</h2>
+	    <h4 align = "left">Your EmployeeID is:</h4>
+	</div>
+
+	<div class = "Current Menu">
+	    <h3 align = "center">Menu & Price</h3>
+	    <a href="{{url_for('prices')}}" >Add</a> <p1>&nbsp</p1>
+	    <a href="{{url_for('prices')}}" >Drop</a> <p1>&nbsp</p1>
+	    <a href="{{url_for('prices')}}" >Modify</a> <p1>&nbsp</p1>
+	    <br></br>
+	    <table>
+	        <tr>
+	            <th>Cake</th>
+	            <th>CakeID</th>
+	            <th>Price</th>
+	        </tr>
+	        <tr>
+	            <td>/</td>
+	            <td>/</td>
+	            <td>/</td>
+	        </tr>
+	          <tr>
+	            <td>/</td>
+	            <td>/</td>
+	            <td>/</td>
+	        </tr>
+	</table>
+	</div>
+
+	<br></br>
+	<br></br>
+
+	</body>
+{% endblock %}

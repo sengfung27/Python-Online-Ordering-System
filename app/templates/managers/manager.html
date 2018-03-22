@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-           
+{% extends "base.html" %}   
+
+{% block content %}  
     <h2>Manager Page</h2>
-    <p>This page can only be accessed by manager seng.</p><br/>
-    
-	<a href="{{ url_for('payroll')}}">Payroll</a>
-	<a href="{{ url_for('complaints')}}">Complaints</a>
-	<a href="{{ url_for('index')}}">Home</a>
-</html>
+    <p>This is manager's {{current_user.username}}.</p><br/>
+
+{% endblock %}

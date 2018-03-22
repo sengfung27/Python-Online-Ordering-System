@@ -12,7 +12,6 @@ def login_required(role):
 	def wrapper(fn):
 		@wraps(fn)
 		def decorated_view(*args, **kwargs):
-
 			if not current_user.is_authenticated:
 				return redirect(url_for('login',next=request.url))	
 			urole = current_user.get_urole()
@@ -25,54 +24,54 @@ def login_required(role):
 @app.route('/')
 @app.route('/index')
 def index():
-	
+
 	return render_template('index.html',title ='Home')
+	
+@app.route('/manager')
+@login_required(4)
+def manager():
 
-@app.route('/special')
-@login_required(2)
-def special():
+	return render_template('managers/manager.html',title = 'Manager')
 
-	return render_template('special.html')
+@app.route('/cook')
+@login_required(3)
+def cook():
 
-@app.route('/special/deliveries')
+	return render_template('cooks/cook.html',title = 'Cook')
+
+@app.route('/delivery')
 @login_required(2)
 def delivery():
 
-	return render_template('deliveries/delivery.html')
+	return render_template('deliveries/delivery.html',title = 'Delivery')
 
-@app.route('/special/deliveries/map')
+@app.route('/map')
 @login_required(2)
 def map():
 	
 	return render_template('deliveries/map.html')
 
-@app.route('/special/cook')
-@login_required(3)
-def cook():
 
-	return render_template('cooks/cook.html')
-
-@app.route('/special/cook/prices')
+@app.route('/prices')
 @login_required(3)
 def prices():
 	
 	return render_template('cooks/prices.html')
 
-@app.route('/special/manager')
+@app.route('/cookcustorder')
+@login_required(3)
+def cookcustorder():
+
+	return render_template('cooks/cookcustorder.html')
+
+@app.route('/complaints')
 @login_required(4)
-def manager():
-
-	return render_template('managers/manager.html')
-
-
-@app.route('/special/manager/complaints')
-@login_required(role=4)
 def complaints():
 	
 	return render_template('managers/complaints.html')
 
-@app.route('/special/manager/payroll')
-@login_required(role=4)
+@app.route('/payroll')
+@login_required(4)
 def payroll():
 	
 	return render_template('managers/payroll.html')
@@ -80,7 +79,14 @@ def payroll():
 @app.route('/login', methods = ['GET','POST'])
 def login():
 	if current_user.is_authenticated:
-		return redirect(url_for('index'))
+		if current_user.urole == 4:
+			return redirect(url_for('manager'))
+		if current_user.urole == 3:
+			return redirect(url_for('cook'))
+		if current_user.urole == 2:
+			return redirect(url_for('delivery'))
+		else:
+			return redirect(url_for('index'))
 	form = LoginForm()
 	if form.validate_on_submit():
 		user = User.query.filter_by(username=form.username.data).first()
@@ -90,8 +96,15 @@ def login():
 		login_user(user, remember=form.remember_me.data)
 		next_page = request.args.get('next')
 		if not next_page or url_parse(next_page).netloc != '':
-			next_page = url_for('index')
-		return redirect(url_for('index'))
+			if current_user.urole == 4:
+				next_page = url_for('manager')
+			elif current_user.urole == 3:
+				next_page = url_for('cook')
+			elif current_user.urole == 2:
+				next_page = url_for('delivery')
+			else:
+				next_page = url_for('index')
+		return redirect(next_page)
 	return render_template('login.html',title='Sign In', form = form)
 
 @app.route('/logout')
@@ -102,7 +115,14 @@ def logout():
 @app.route('/register',methods=['GET', 'POST'])
 def register():
 	if current_user.is_authenticated:
-		return redirect(url_for('index'))
+		if current_user.urole == 4:
+			return redirect(url_for('manager'))
+		if current_user.urole == 3:
+			return redirect(url_for('cook'))
+		if current_user.urole == 2:
+			return redirect(url_for('delivery'))
+		else:
+			return redirect(url_for('index'))
 	form = RegistrationForm()
 	if form.validate_on_submit():
 		user = User(username=form.username.data, email=form.email.data, urole = 1)

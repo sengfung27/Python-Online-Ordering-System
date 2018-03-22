@@ -2,13 +2,12 @@
 
 {% block content %}
 
-					<div class="row">
-					{% if current_user.is_authenticated %}
-					<h1>Hello, {{ current_user.username }}!</h1>
+		<div class="row">
+		{% if current_user.is_authenticated %}
+		<h1>Hello, {{ current_user.username }}!</h1>
 
-					{% else %}
-					<h1>Hello, Stranger !</h1>
-					{% endif %}
-
+		{% else %}
+		<h1>Hello, Stranger !</h1>
+		{% endif %}
 	
 {% endblock %}

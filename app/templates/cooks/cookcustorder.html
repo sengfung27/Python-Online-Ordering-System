@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <head>
+        
+        <!-- for table-->
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <div class = "welcome" align = "left"> <!--welcome message-->
+        <h2> Welcome Cook!</h2>
+        <h4 align = "left">Your EmployeeID is:</h4>
+    </div>
+
+    <div class = "custordertable">
+        <h3 align = "center">Customer Order History</h3>
+        <table>
+            <tr>
+                <th>CustomerID</th>
+                <th>OrderID</th>                     <!--pending discussion: what if cook complete making cake and ready for delivery? Any attributes?-->
+                <th>CakeID</th>
+                <th>Rate</th>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+            </tr>
+              <tr>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+            </tr>
+    </table>
+    </div>
+
+    <br></br>
+    <br></br>
+
+
+    <div class = "Dropped list">
+        <!--Given CakeID and its updated average rate(last 3 orders), dropped if average rate < 2, receive warning if that pizza dropped twice-->
+        <!--update the total # of warning attribute, >= 3 laid off-->
+        <h3 align = "center">Dropped pizza and warnings</h3>
+        <table>
+            <tr>
+                <th>Cake ID</th>
+                <th>Average Rate(Last 3 Orders)</th> <!--pending discussion: reset avarage if dropped once?-->
+                <th>Dropped</th>                     <!--pending discussion: keep or drop this attribute-->
+                <th># Drops</th>
+                <th>Warning</th>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+                <td>/</td>
+            </tr>
+    </table>
+    </div>
+
+    </body>
+
+{% endblock %}

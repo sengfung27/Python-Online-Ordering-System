@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-           
-	<h1>Payroll for cooks and deliveries</h1>
-	<h2>This only can see by Manager</h2>
-	<a href="{{ url_for('index')}}">Home</a>
+{% extends "base.html" %}   
 
-</html>
+{% block content %}  
+    <h1>Payroll for Manager</h1>
+    <p>This page can only be accessed by manager {{current_user.username}}.</p><br/>
+
+
+{% endblock %}

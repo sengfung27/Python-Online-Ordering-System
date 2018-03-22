@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<title>Microblog</title>
+<title>Cake</title>
 <head>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/base.css')}}">
@@ -12,24 +13,45 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	{% if title %}
-	<title>{{ title }} - Microblog</title>
+	<title>{{ title }} - Cake</title>
 	{% else %}
-	<title>Welcome - Microblog</title>
+	<title>Welcome - Cake</title>
 	{% endif %}
+
+
 </head>
 <body>
-	<div class="header">
+
+
+		<div class = "options" align = "right">
+		{% if current_user.urole == 4 and current_user.is_authenticated %}
+			<a href="{{ url_for('complaints')}}">Complaints</a>
+			<a href="{{ url_for('payroll')}}">Payrolls</a>
 		
-		<div class="user_login">
-		{% if current_user.is_manager and current_user.is_authenticated %}
-		<a href="{{ url_for('special')}}">Special</a`>
-		{% endif %}
-		{% if current_user.is_anonymous %}
-		<a href="{{ url_for('login')}}">Login/register</a>
+		{% elif current_user.urole == 3 and current_user.is_authenticated %}
+			<a href="{{ url_for('prices')}}">Prices</a>		
+			<a href="{{ url_for('cookcustorder')}}">My Customer Orders</a>	
+
+		{% elif current_user.urole == 2 and current_user.is_authenticated %}
+			<a href="{{ url_for('map')}}">Map</a>				
+
 		{% else %}
-		<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
-		<a href="{{ url_for('logout')}}">Logout</a>
+			<a href="{{ url_for('index')}}">Home</a>
+
 		{% endif %}
+
+			<a href="{{ url_for('menu')}}">Menu</a>
+
+		{% if current_user.is_anonymous %}
+
+		<a href="{{ url_for('login')}}">Login/register</a>
+
+		{% else %}
+			<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
+			<a href="{{ url_for('logout')}}">Logout</a>
+
+		{% endif %}
+
 		</div>
 		
 	</div>
@@ -39,6 +61,26 @@
 		<a href="{{ url_for('menu')}}">Menu</a>
 		<a href="{{ url_for('index')}}">Home</a>
 	</div>
+
+
+		</div>
+		<div class = "logo"> <!-- logo-->
+    		
+    		{% if current_user.urole == 4 and current_user.is_authenticated %}
+				<a href="{{ url_for('manager')}}"><img src="http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg" alt="logo" style="width:60px;height:60px;border:0;"></a>
+		
+			{% elif current_user.urole == 3 and current_user.is_authenticated %}
+				<a href="{{ url_for('cook')}}"><img src="http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg" alt="logo" style="width:60px;height:60px;border:0;"></a>	
+
+			{% elif current_user.urole == 2 and current_user.is_authenticated %}
+				<a href="{{ url_for('delivery')}}"><img src="http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg" alt="logo" style="width:60px;height:60px;border:0;"></a>		
+
+			{% else %}
+				<a href="{{ url_for('index')}}"><img src="http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg" alt="logo" style="width:60px;height:60px;border:0;"></a>
+
+			{% endif %}
+    			
+    	</div>
 
 <!--
 	<div class="user_login">
@@ -54,6 +96,7 @@
 	</div>
 -->
 	<hr>
+
 <div id="wrapper">
 	<div class="page-wrapper" style="padding-top: 0px";>
 		<div class="container">
@@ -61,6 +104,10 @@
 				<div class="inner-space" style="margin-top: 7px; min-height: 1000px";>
 	{% with messages = get_flashed_messages() %}
 	{% if messages %}
+=======
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+>>>>>>> master
 	<ul>
 		{% for message in messages %}
 		<li>
@@ -70,6 +117,7 @@
 	</ul>
 	{% endif %}
 	{% endwith %}
+
 	{% block content %}
 	{% endblock %}
 					
