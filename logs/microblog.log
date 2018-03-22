@@ -32,3 +32,4 @@ Traceback (most recent call last):
   File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
     return current_app.login_manager.unauthorized()
 NameError: name 'current_app' is not defined
+2018-03-21 23:44:15,755 INFO: Microblog startup [in /home/gor/Python-Online-Ordering-System/app/__init__.py:44]
