@@ -2,29 +2,65 @@
  	padding: 40px;
 }
 
-h1 {
-	margin: 10px 45px;
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.logo {
+	float: left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 147px;
+ 	padding-top: 10px;
+}
+
+.options {
+ 	float: right;
+ 	position: absolute; 
+ 	top: 0; 
+ 	right: 0; 
+ 	padding-right: 147px;
+ 	padding-top: 10px;
+ 	/*width: 100px;*/ 
+ 	text-align:right;
+}
+
+.options a {
+	padding-top: 10px;
+	padding-left: 10px;
 }
 
 .nav {
  	overflow: hidden;
- 
+ 	padding-right: 147px;
 }
 
 .nav a {
  	float: right;
  	display: block;
  	text-align: center;
- 	padding: 14px 16px;
+ 	padding-top: 14px;
+ 	padding-bottom: 14;
+ 	padding-left: 20px;
  	/*color: white;*/
  	text-decoration: none;
 }
+
+h1, h2, p {
+	margin: 10px 45px;
+}
+
 /*
  .nav a:hover {
  	background-color: darkgrey;
  }
 */
 
+/*
 .user_login {
  	float: right;
  	position: absolute; 
@@ -35,6 +71,7 @@ h1 {
  	width: 100px; 
  	text-align:right;
 }
+*/
 
 hr {
 	margin: 0px;

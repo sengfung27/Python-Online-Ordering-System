@@ -1,90 +1,85 @@
-2018-03-16 15:34:13,978 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
-2018-03-16 15:34:17,903 ERROR: Exception on /special [GET] [in /home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py:1560]
+2018-03-22 11:05:21,686 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:06:24,143 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:09:02,758 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:09:56,551 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:10:28,806 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:10:30,436 ERROR: Exception on / [GET] [in /Library/Python/2.7/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1982, in wsgi_app
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1614, in full_dispatch_request
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1517, in handle_user_exception
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/seng/microblog/venv/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/seng/microblog/app/routes.py", line 20, in decorated_view
-    return current_app.login_manager.unauthorized()
-NameError: name 'current_app' is not defined
-2018-03-16 16:05:52,459 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:12:36,073 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:14:37,087 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:19:11,437 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:20:56,241 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:26:38,206 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:28:48,471 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:33:38,462 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:34:54,254 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:37:26,763 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:38:22,721 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:43:21,740 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:48:14,268 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:48:42,712 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:48:49,115 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:52:08,703 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 16:59:06,819 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 17:18:47,346 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 17:26:26,943 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 17:45:52,354 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 18:14:26,741 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-<<<<<<< HEAD
-2018-03-16 18:30:59,118 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-16 18:33:34,892 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-=======
-2018-03-16 18:23:48,687 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
-2018-03-16 18:31:42,927 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
-2018-03-16 18:33:45,864 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
-2018-03-16 18:36:54,805 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
-2018-03-16 18:38:17,140 INFO: Microblog startup [in /home/seng/microblog/app/__init__.py:48]
->>>>>>> 202fc18be46ebbaa30ec9d5c7ac360b10f97a858
-2018-03-17 10:51:33,200 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:25:00,300 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:26:03,437 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:28:12,484 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:29:20,440 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:31:09,129 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:33:33,185 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:34:59,587 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:40:56,147 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:52:01,359 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:55:33,265 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:56:51,146 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:57:43,231 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 12:58:48,871 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 13:51:00,148 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 13:53:17,685 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 13:54:27,529 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 13:55:16,155 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 13:56:57,915 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 14:00:46,582 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 14:01:39,599 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 14:02:07,731 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 14:02:54,422 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 14:03:40,237 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:29:49,151 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:32:29,484 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:33:33,095 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:34:21,102 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:36:02,771 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:37:19,526 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:39:40,175 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:44:05,735 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:45:42,445 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:46:05,447 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:47:51,976 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:49:26,530 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:55:14,066 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 19:56:01,945 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 20:01:35,517 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 20:03:00,856 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
-2018-03-17 20:03:44,029 INFO: Microblog startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:48]
+  File "/Users/caizhuoying/Documents/Python-Online-Ordering-System/app/routes.py", line 28, in index
+    return render_template('index.html',title ='Home')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/caizhuoying/Documents/Python-Online-Ordering-System/app/templates/base.html", line 112, in template
+    {% endblock %}
+TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2018-03-22 11:11:12,050 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:11:39,018 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:14:05,373 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:14:40,406 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:15:29,521 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:17:08,326 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:17:58,649 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:19:13,217 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:20:05,282 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:20:49,282 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:23:04,058 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:23:59,177 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:31:44,376 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:32:32,474 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 11:34:15,417 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:47:48,546 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:48:25,588 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:52:51,246 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:55:37,646 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:56:14,546 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:56:51,322 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:58:23,343 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 12:59:44,679 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:01:12,482 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:02:48,493 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:03:25,438 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:04:41,721 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:05:44,650 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:06:19,150 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:06:57,454 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:07:42,243 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:09:24,093 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:10:23,440 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:11:13,905 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:12:05,626 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:16:33,637 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:17:19,144 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:17:46,916 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:18:45,294 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:19:26,728 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:19:56,719 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:20:55,815 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:22:15,098 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:22:37,949 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:23:42,976 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:24:23,450 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:25:31,000 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:26:48,004 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:27:32,175 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:28:12,070 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:28:32,343 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:29:31,232 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:30:09,319 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:32:40,799 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]
+2018-03-22 13:33:05,917 INFO: Cake-Online-System startup [in /Users/caizhuoying/Documents/Python-Online-Ordering-System/app/__init__.py:45]

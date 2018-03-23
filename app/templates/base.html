@@ -22,49 +22,9 @@
 </head>
 <body>
 
-
-		<div class = "options" align = "right">
-		{% if current_user.urole == 4 and current_user.is_authenticated %}
-			<a href="{{ url_for('complaints')}}">Complaints</a>
-			<a href="{{ url_for('payroll')}}">Payrolls</a>
-		
-		{% elif current_user.urole == 3 and current_user.is_authenticated %}
-			<a href="{{ url_for('prices')}}">Prices</a>		
-			<a href="{{ url_for('cookcustorder')}}">My Customer Orders</a>	
-
-		{% elif current_user.urole == 2 and current_user.is_authenticated %}
-			<a href="{{ url_for('map')}}">Map</a>				
-
-		{% else %}
-			<a href="{{ url_for('index')}}">Home</a>
-
-		{% endif %}
-
-			<a href="{{ url_for('menu')}}">Menu</a>
-
-		{% if current_user.is_anonymous %}
-
-		<a href="{{ url_for('login')}}">Login/register</a>
-
-		{% else %}
-			<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
-			<a href="{{ url_for('logout')}}">Logout</a>
-
-		{% endif %}
-
-		</div>
-		
-	</div>
-
-	<!--<div>Microblog: -->
-	<div class="nav">
-		<a href="{{ url_for('menu')}}">Menu</a>
-		<a href="{{ url_for('index')}}">Home</a>
-	</div>
-
-
-		</div>
-		<div class = "logo"> <!-- logo-->
+<div class="header">
+	<div class="container">
+		<div class = "logo"> <!--logo-->
     		
     		{% if current_user.urole == 4 and current_user.is_authenticated %}
 				<a href="{{ url_for('manager')}}"><img src="http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg" alt="logo" style="width:60px;height:60px;border:0;"></a>
@@ -80,8 +40,62 @@
 
 			{% endif %}
     			
-    	</div>
+    </div> 
 
+		<div class = "options">
+<!--		{% if current_user.urole == 4 and current_user.is_authenticated %}
+			<a href="{{ url_for('complaints')}}">Complaints</a>
+			<a href="{{ url_for('payroll')}}">Payrolls</a>
+		
+		{% elif current_user.urole == 3 and current_user.is_authenticated %}
+			<a href="{{ url_for('prices')}}">Prices</a>		
+			<a href="{{ url_for('cookcustorder')}}">My Customer Orders</a>	
+
+		{% elif current_user.urole == 2 and current_user.is_authenticated %}
+			<a href="{{ url_for('map')}}">Map</a>				
+
+		{% else %}
+			<a href="{{ url_for('index')}}">Home</a>
+
+		{% endif %}
+
+			<a href="{{ url_for('menu')}}">Menu</a>-->
+
+		{% if current_user.is_anonymous %}
+
+		<a href="{{ url_for('login')}}">Sign In</a>
+
+		{% else %}
+			<a href="{{ url_for('user',username=current_user.username) }}">Profile</a>
+			<a href="{{ url_for('logout')}}">Logout</a>
+
+		{% endif %}
+
+		</div>
+	</div>
+
+	<!--<div>Microblog: -->
+
+</div>
+
+	<div class="nav">
+		{% if current_user.urole == 4 and current_user.is_authenticated %}
+			<a href="{{ url_for('complaints')}}">Complaints</a>
+			<a href="{{ url_for('payroll')}}">Payrolls</a>
+		
+		{% elif current_user.urole == 3 and current_user.is_authenticated %}
+			<a href="{{ url_for('prices')}}">Prices</a>		
+			<a href="{{ url_for('cookcustorder')}}">My Customer Orders</a>	
+
+		{% elif current_user.urole == 2 and current_user.is_authenticated %}
+			<a href="{{ url_for('map')}}">Map</a>				
+
+		{% else %}
+			<a href="{{ url_for('menu')}}">Menu</a>
+			<a href="{{ url_for('index')}}">Home</a>
+
+		{% endif %}
+	</div>
 <!--
 	<div class="user_login">
 		{% if current_user.is_manager and current_user.is_authenticated %}
@@ -104,10 +118,7 @@
 				<div class="inner-space" style="margin-top: 7px; min-height: 1000px";>
 	{% with messages = get_flashed_messages() %}
 	{% if messages %}
-=======
-		{% with messages = get_flashed_messages() %}
-		{% if messages %}
->>>>>>> master
+
 	<ul>
 		{% for message in messages %}
 		<li>
