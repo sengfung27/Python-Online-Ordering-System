@@ -4,7 +4,7 @@
 #Flask logs and db
 .log
 log
-logs
+logs/
 app.db
 .db
 
