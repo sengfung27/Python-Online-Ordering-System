@@ -48,6 +48,11 @@ git branch -d name_branch_local
 git push origin --delete name_branch_remote
 
 ```
+#### Set Upstream
+On your local branch
+`git branch --set-upstream-to origin/your_branch`
+On your master branch
+`git branch --set-upstream-to origin/master`
 
 ## Workflow
 
