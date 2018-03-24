@@ -1,11 +1,18 @@
 # Python-Online-Ordering-System
 
 ## Getting Started 
-### Make sure you have at least Python 2.7 in you local machine
+### Git clone repository
+```
+git clone https://github.com/sengfung27/Python-Online-Ordering-System.git
+```
+
+### Make sure you have Python in your local machine, then do 
 ```
 pip install -r venv/bin/requirement.txt
 
 ```
+
+### Upload your `app.db` on your folder
 
 ### Activate virtual environment
 ```
