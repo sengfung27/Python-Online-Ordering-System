@@ -3,13 +3,8 @@
 ## Getting Started 
 ### Make sure you have at least Python 2.7 in you local machine
 ```
-pip install virtualenv
-virtualenv venv
-pip install flask
-pip install flask_sqlalchemy
-pip install flask_migrate
-pip install flask_login
-pip install flask_wtf
+pip install -r venv/bin/requirement.txt
+
 ```
 
 ### Activate virtual environment
@@ -18,15 +13,8 @@ source venv/bin/activate
 export FLASK_APP=microblog.py
 ```
 
-### Running Flask without debug mode
+### Running Flask
 ```
-export FLASK_DEBUG=0
-flask run
-```
-
-### Running Flask with debug mode
-```
-export FLASK_DEBUG=1
 flask run
 ```
 
