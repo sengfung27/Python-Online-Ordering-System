@@ -43,3 +43,4 @@ if not app.debug:
 
 	app.logger.setLevel(logging.INFO)
 	app.logger.info('Cake-Online-System startup')
+	#app.run(host='192.168.1.168',port=5000)
