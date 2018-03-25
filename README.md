@@ -8,7 +8,7 @@ git clone https://github.com/sengfung27/Python-Online-Ordering-System.git
 
 ### Make sure you have Python in your local machine, then do 
 ```
-pip install -r venv/bin/requirement.txt
+pip install -r venv/bin/requirements.txt
 
 ```
 
